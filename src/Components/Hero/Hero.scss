@@ -1,5 +1,43 @@
-.hero-image {
-    width: 1000px;
-    height: 1000px;
+@import "../../Settings/Settings.scss";
+
+$img-dimension: 60vw;
+$img-dimensionm-max: 300px;
+$img-distance-to-top: 120px;
+$display-font-size: 90px;
+$mobile-display-font-size: 15vw;
+
+@mixin response-to($device) {
+    @if $device == phones {
+        @media only screen and (max-width: $phone-width) {
+            @content;
+        }
+    }@else if $device == computers {
+        @media only screen and (min-width: $phone-width + 1) {
+            @content 
+        }
+    }    
+}
+
+.hero {
     margin: auto;
+    text-align: center;
+    padding-top: $img-distance-to-top;
+    display: block;
+}
+
+.hero-image {
+    width: $img-dimension;
+    height: $img-dimension;
+    max-width: $img-dimensionm-max;
+    max-height: $img-dimensionm-max;
+}
+
+.hero-display {
+    font-family: $display-font;
+    font-size: $display-font-size;
+    @include response-to(phones) {font-size: $mobile-display-font-size;}
+    @include response-to(computers) {font-size: $display-font-size;}
+    text-transform: uppercase;
+    color: $primary-dark;
+    margin: 0;
 }

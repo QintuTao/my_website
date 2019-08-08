@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Hero.scss";
+import Logo from "../../Settings/logo.svg";
 
 class Hero extends React.Component {
     constructor(props) {
@@ -8,7 +9,11 @@ class Hero extends React.Component {
 
     render() {
         return(
-        <svg xmlns="logo.svg"></svg>
+            <div className = "hero">
+                <img src={Logo} className="hero-image" />
+                <p className="hero-display">qintu.ca</p>
+            </div>
+            
         )
     }
 }

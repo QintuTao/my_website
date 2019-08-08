@@ -1,4 +1,9 @@
-$primary-font: "OpenSans" sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,600,600i|Saira+Stencil+One&display=swap');
+
+$primary-font: "Nunito" sans-serif;
+$display-font: "Saira Stencil One", cursive;
 
 $primary-dark: #1f1f1f;
 $primary-white: #eee;
+
+$phone-width: 480px;
