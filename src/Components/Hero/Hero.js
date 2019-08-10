@@ -12,8 +12,8 @@ class Hero extends React.Component {
             <div className = "hero">
                 <img src={Logo} className="hero-image" />
                 <p className="hero-display">qintu.ca</p>
+                <p className="hero-slogan"> live a life as colourful as possible</p>
             </div>
-            
         )
     }
 }

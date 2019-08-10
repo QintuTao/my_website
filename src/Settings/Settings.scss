@@ -7,3 +7,15 @@ $primary-dark: #1f1f1f;
 $primary-white: #eee;
 
 $phone-width: 480px;
+
+@mixin response-to($device) {
+    @if $device == phones {
+        @media only screen and (max-width: $phone-width) {
+            @content;
+        }
+    }@else if $device == computers {
+        @media only screen and (min-width: $phone-width + 1) {
+            @content 
+        }
+    }    
+}

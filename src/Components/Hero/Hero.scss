@@ -1,27 +1,28 @@
 @import "../../Settings/Settings.scss";
 
-$img-dimension: 60vw;
+$img-dimension: 20vw;
 $img-dimensionm-max: 300px;
-$img-distance-to-top: 120px;
-$display-font-size: 90px;
-$mobile-display-font-size: 15vw;
 
-@mixin response-to($device) {
-    @if $device == phones {
-        @media only screen and (max-width: $phone-width) {
-            @content;
-        }
-    }@else if $device == computers {
-        @media only screen and (min-width: $phone-width + 1) {
-            @content 
-        }
-    }    
-}
+$img-distance-to-top: 30vh;
+$mobile-img-distance-to-top: 25vh;
+
+$display-font-size: 90px;
+$mobile-display-font-size: 10vw;
+
+$slogan-font-size: 24px;
+$mobile-slogan-font-size: 20px;
+
+
 
 .hero {
     margin: auto;
     text-align: center;
-    padding-top: $img-distance-to-top;
+    @include response-to(phones) {
+        padding-top: $mobile-img-distance-to-top;
+    }
+    @include response-to(computers) {
+        padding-top: $img-distance-to-top;
+    }
     display: block;
 }
 
@@ -35,9 +36,21 @@ $mobile-display-font-size: 15vw;
 .hero-display {
     font-family: $display-font;
     font-size: $display-font-size;
-    @include response-to(phones) {font-size: $mobile-display-font-size;}
+    @include response-to(phones) {
+        font-size: $mobile-display-font-size;
+    }
     @include response-to(computers) {font-size: $display-font-size;}
     text-transform: uppercase;
     color: $primary-dark;
-    margin: 0;
+    margin:20px 0 0 0;
+}
+
+.hero-slogan {
+    font-family: $primary-font;
+    @include response-to(phones) {
+        font-size: $mobile-slogan-font-size;
+    }
+    @include response-to(computers) {
+        font-size: $slogan-font-size;
+    }
 }
