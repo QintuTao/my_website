@@ -4,13 +4,14 @@
 
 $arrow-stroke: solid 3px $primary-dark;
 
-$arrow-side-length: 18px;
+$arrow-side-length: 24px;
 $mobile-arrow-side-length: 10px;
 
 $arrow-button-background: transparent;
 $arrow-button-border: none;
 
 $arrow-animation-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.414s;
+$arrow-animation-properties: float-animation 1.45s infinite $arrow-animation-transition;
 
 .arrow {
     border-top:$arrow-stroke;
@@ -22,6 +23,7 @@ $arrow-animation-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.414s;
     padding: auto;
     transform: rotate(135deg);
     transition: $arrow-animation-transition;
+    animation: $arrow-animation-properties;
 }
 
 .arrow-button {
@@ -35,3 +37,14 @@ $arrow-animation-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.414s;
     box-shadow: 3px -3px 3px red;
 }
 
+@keyframes float-animation {
+    0% {
+        border-color: $primary-dark;
+    }
+    50% {
+        border-color: $secondary-white;
+    }
+    100% {
+        border-color: $secondary-dark;
+    }
+}
