@@ -10,6 +10,8 @@ $mobile-arrow-side-length: 10px;
 $arrow-button-background: transparent;
 $arrow-button-border: none;
 
+$arrow-animation-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.414s;
+
 .arrow {
     border-top:$arrow-stroke;
     border-right: $arrow-stroke;
@@ -18,7 +20,8 @@ $arrow-button-border: none;
     height: $arrow-side-length;
     margin: -5px;
     padding: auto;
-    transform: rotate(135deg)
+    transform: rotate(135deg);
+    transition: $arrow-animation-transition;
 }
 
 .arrow-button {
@@ -27,6 +30,8 @@ $arrow-button-border: none;
 }
 
 .arrow-button:hover > .arrow {
-    border-color:red;
+    border-color :red;
+    transition: $arrow-animation-transition;
+    box-shadow: 3px -3px 3px red;
 }
 
