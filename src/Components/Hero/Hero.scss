@@ -1,18 +1,20 @@
 @import "../../Settings/Settings.scss";
 
-$img-dimension: 20vw;
+
+$img-dimension: 32vw;
 $img-dimensionm-max: 300px;
 
-$img-distance-to-top: 30vh;
+$img-distance-to-top: 24vh;
 $mobile-img-distance-to-top: 25vh;
 
 $display-font-size: 90px;
-$mobile-display-font-size: 10vw;
+$mobile-display-font-size: 8vw;
 
 $slogan-font-size: 24px;
-$mobile-slogan-font-size: 20px;
+$mobile-slogan-font-size: 16px;
 
-
+$slogan-y-offset: -20px;
+$mobile-slogan-y-offset: 0;
 
 .hero {
     margin: auto;
@@ -39,18 +41,23 @@ $mobile-slogan-font-size: 20px;
     @include response-to(phones) {
         font-size: $mobile-display-font-size;
     }
-    @include response-to(computers) {font-size: $display-font-size;}
+    @include response-to(computers) {
+        font-size: $display-font-size;
+    }
     text-transform: uppercase;
     color: $primary-dark;
-    margin:20px 0 0 0;
+    margin:50px 0 0 0;
 }
 
 .hero-slogan {
     font-family: $primary-font;
+    font-weight: $bold-font-weight;
     @include response-to(phones) {
         font-size: $mobile-slogan-font-size;
+        margin-top: $mobile-slogan-y-offset;
     }
     @include response-to(computers) {
         font-size: $slogan-font-size;
+        margin-top: $slogan-y-offset;
     }
 }

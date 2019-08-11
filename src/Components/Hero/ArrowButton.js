@@ -1,15 +1,33 @@
 import React from "react";
-import "./Hero.scss";
-import Button from "@material/react-button";
+import "./ArrowButton.scss";
 
-class ArrowButton extends React.Component {
+class Arrow extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <Button>Hello World!</Button>
+            <p className="arrow"></p>
+        )
+    }
+}
+
+class ArrowButton extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+   
+    render() {
+        return (
+            <button className="arrow-button" onMouseEnter={
+                console.log("dd")
+            }>
+                <Arrow />
+                <Arrow />
+                <Arrow />
+            </button>
         )
     }
 }

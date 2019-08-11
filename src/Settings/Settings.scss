@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,600,600i|Saira+Stencil+One&display=swap');
 
-$primary-font: "Nunito" sans-serif;
+$primary-font: "Nunito", sans-serif;
 $display-font: "Saira Stencil One", cursive;
+
+$primary-font-weight: 300;
+$bold-font-weight: 600;
 
 $primary-dark: #1f1f1f;
 $primary-white: #eee;

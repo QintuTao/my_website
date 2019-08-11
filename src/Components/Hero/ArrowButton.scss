@@ -1,0 +1,32 @@
+@import "@material/react-button/index.scss";
+@import "../../Settings/MDC_React/react-button-overrides";
+@import "../../Settings/Settings";
+
+$arrow-stroke: solid 3px $primary-dark;
+
+$arrow-side-length: 18px;
+$mobile-arrow-side-length: 10px;
+
+$arrow-button-background: transparent;
+$arrow-button-border: none;
+
+.arrow {
+    border-top:$arrow-stroke;
+    border-right: $arrow-stroke;
+    display: block;
+    width: $arrow-side-length;
+    height: $arrow-side-length;
+    margin: -5px;
+    padding: auto;
+    transform: rotate(135deg)
+}
+
+.arrow-button {
+    border: $arrow-button-border;
+    background: $arrow-button-background;
+}
+
+.arrow-button:hover > .arrow {
+    border-color:red;
+}
+
