@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Header.scss";
+import MenuItem from "./MenuItem";
 
 class Header extends React.Component {
     constructor(props) {
@@ -8,7 +9,11 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className="header"></div>
+            <div className="header">
+                <MenuItem />
+                <MenuItem />
+                <MenuItem />
+            </div>
         )
     }
 }
