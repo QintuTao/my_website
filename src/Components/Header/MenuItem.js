@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material/react-button";
 import "./MenuItem.scss";
 
 class MenuItem extends React.Component {
@@ -9,7 +8,7 @@ class MenuItem extends React.Component {
 
     render() {
         return (
-            <Button className="button-alternate"> Hello World </Button>
+            <button className="menu-buttons"> Hello World </button>
         )
     }
 }

@@ -1,6 +1,13 @@
 @import "../../Settings/Settings.scss";
 
-@import "@material/react-button/index.scss";
-@import "../../Settings/MDC_React/react-button-overrides.scss";
+$button-nums: 3;
+$button-width: percentage(1/$button-nums);
+
+.menu-buttons {
+    border:none;
+    width: $button-width;
+    height: 100%;
+    font-family: $primary-font;
+}
 
 
