@@ -13,6 +13,7 @@ $secondary-white: #ddd;
 $selection-yellow: #ebb82b;
 
 $phone-width: 480px;
+$screen-width: 960px;
 
 @mixin response-to($device) {
     @if $device == phones {
@@ -21,10 +22,16 @@ $phone-width: 480px;
         }
     }@else if $device == computers {
         @media only screen and (min-width: $phone-width + 1) {
-            @content 
+            @content;
         }
-    }    
+    } @else if $device == wide {
+        @media only screen and (min-width: $screen-width) {
+            @content;
+        }
+    }  
 }
+
+
 *::selection {
     background-color:$selection-yellow;
 }

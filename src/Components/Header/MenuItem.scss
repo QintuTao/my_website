@@ -12,16 +12,11 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
     font-family: $primary-font;
     transition: $button-tapped-transition;
     padding: 0;
-}
 
-.menu-buttons:hover {
-    transition: $button-tapped-transition;
-
-    :after { 
-        background-color: black;
+    @include response-to(wide) {
+        width: 300px;
     }
 }
-
 .menu-buttons::after {
     content:" ";
     bottom: 0px;
@@ -29,7 +24,7 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
     height: 8%;
     display: block;
     position: absolute;
-    background-color: red;
+    background-color: $selection-yellow;
 }
 
 

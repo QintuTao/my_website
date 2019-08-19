@@ -30,9 +30,9 @@ $arrow-animation-properties: float-animation 1.45s infinite $arrow-animation-tra
 }
 
 .arrow-button:hover .arrow {
-    border-color :red;
+    border-color: $selection-yellow;
     transition: $arrow-animation-transition;
-    box-shadow: 3px -3px 3px red;
+    box-shadow: 3px -3px 3px $selection-yellow;
 }
 
 @keyframes float-animation {
