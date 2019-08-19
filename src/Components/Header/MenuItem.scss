@@ -3,11 +3,33 @@
 $button-nums: 3;
 $button-width: percentage(1/$button-nums);
 
+$button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
+
 .menu-buttons {
     border:none;
     width: $button-width;
     height: 100%;
     font-family: $primary-font;
+    transition: $button-tapped-transition;
+    padding: 0;
+}
+
+.menu-buttons:hover {
+    transition: $button-tapped-transition;
+
+    :after { 
+        background-color: black;
+    }
+}
+
+.menu-buttons::after {
+    content:" ";
+    bottom: 0px;
+    width: 100%;
+    height: 8%;
+    display: block;
+    position: absolute;
+    background-color: red;
 }
 
 

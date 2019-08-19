@@ -10,6 +10,7 @@ $primary-dark: #1f1f1f;
 $primary-white: #f7f7f7;
 $secondary-dark: #393939;
 $secondary-white: #ddd;
+$selection-yellow: #ebb82b;
 
 $phone-width: 480px;
 
@@ -23,4 +24,7 @@ $phone-width: 480px;
             @content 
         }
     }    
+}
+*::selection {
+    background-color:$selection-yellow;
 }

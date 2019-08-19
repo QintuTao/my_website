@@ -29,7 +29,7 @@ $arrow-animation-properties: float-animation 1.45s infinite $arrow-animation-tra
     background: $arrow-button-background;
 }
 
-.arrow-button:hover > .arrow {
+.arrow-button:hover .arrow {
     border-color :red;
     transition: $arrow-animation-transition;
     box-shadow: 3px -3px 3px red;
