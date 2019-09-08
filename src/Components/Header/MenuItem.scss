@@ -20,13 +20,25 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
 .menu-buttons::after {
     content:" ";
     bottom: 0px;
+    width: 0px;
+    height: 8%;
+    display: block;
+    position: absolute;
+    background-color: $selection-yellow;
+    transition: $button-tapped-transition;
+} 
+
+.menu-buttons:hover::after {
+    content:" ";
+    bottom: 0px;
     width: $button-width;
     height: 8%;
     display: block;
     position: absolute;
     background-color: $selection-yellow;
+    transition: $button-tapped-transition;
 
     @include response-to(wide) {
         width: $button-width-computer;
     }
-} 
+}
