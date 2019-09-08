@@ -2,7 +2,7 @@
 
 $button-nums: 3;
 $button-width: percentage(1/$button-nums);
-
+$button-width-computer: 300px;
 $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
 
 .menu-buttons {
@@ -14,15 +14,19 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
     padding: 0;
 
     @include response-to(wide) {
-        width: 300px;
+        width: $button-width-computer;
     }
 }
 .menu-buttons::after {
     content:" ";
     bottom: 0px;
-    width: 100%;
+    width: $button-width;
     height: 8%;
     display: block;
     position: absolute;
     background-color: $selection-yellow;
-}
+
+    @include response-to(wide) {
+        width: $button-width-computer;
+    }
+} 
