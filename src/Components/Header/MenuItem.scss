@@ -17,21 +17,28 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
         width: $button-width-computer;
     }
 }
+
+
 .menu-buttons::after {
     content:" ";
     bottom: 0px;
-    width: 0px;
+    width: 0;
     height: 8%;
     display: block;
     position: absolute;
+    margin-left: $button-width-computer / 2;
     background-color: $selection-yellow;
     transition: $button-tapped-transition;
+
+    @include response-to(wide) {
+        margin-left: $button-width-computer / 2;
+    }
 } 
 
 .menu-buttons:hover::after {
     content:" ";
     bottom: 0px;
-    width: $button-width;
+    width: $button-width/2;
     height: 8%;
     display: block;
     position: absolute;
@@ -39,6 +46,43 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
     transition: $button-tapped-transition;
 
     @include response-to(wide) {
-        width: $button-width-computer;
+        width: $button-width-computer/2;
     }
+}
+
+.menu-buttons::before {
+    content:" ";
+    bottom: 0px;
+    width: 0;
+    height: 8%;
+    display: block;
+    position: absolute;
+    margin-left: $button-width-computer/2;
+    background-color: $selection-yellow;
+    transition: $button-tapped-transition;
+
+    @include response-to(wide) {
+        margin-left: $button-width-computer/2;
+    }
+} 
+
+.menu-buttons:hover::before {
+    content:" ";
+    bottom: 0px;
+    width: $button-width/2;
+    height: 8%;
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    background-color: $selection-yellow;
+    transition: $button-tapped-transition;
+
+    @include response-to(wide) {
+        width: $button-width-computer/2;
+        margin-left:0;
+    }
+}
+
+.menu-buttons:hover {
+    background: transparent;
 }
