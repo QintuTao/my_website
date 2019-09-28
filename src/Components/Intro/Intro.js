@@ -1,5 +1,6 @@
 import React from 'react';
 import './Intro.scss';
+import Profile from './Profile.js'
 
 class Intro extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class Intro extends React.Component {
     render() {
         return (
             <div className="intro">
-                Hello World!
+               <Profile />
             </div>
         )
     }
