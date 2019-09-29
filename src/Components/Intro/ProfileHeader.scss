@@ -1,0 +1,28 @@
+@import '../../Settings/Settings.scss';
+
+
+
+.profile-header {
+    @include header-style();
+    z-index:500p;
+}
+
+.profile-header::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    width:10px;
+    height:100px;
+    background-color: $primary-dark;
+    left: 40%;
+}
+
+.profile-header::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    width:10px;
+    height:100px;
+    background-color: $primary-dark;
+    right: 40%;
+}

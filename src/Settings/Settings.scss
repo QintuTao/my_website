@@ -6,6 +6,17 @@ $display-font: "Saira Stencil One", cursive;
 $primary-font-weight: 300;
 $bold-font-weight: 600;
 
+$display-font-size: 90px;
+$mobile-display-font-size: 8vw;
+
+$slogan-font-size: 24px;
+$mobile-slogan-font-size: 16px;
+
+$header-font-size: 60px;
+$mobile-header-font-size: 5.67vw;
+
+$header-height: 100px;
+
 $primary-dark: #1f1f1f;
 $primary-white: #f7f7f7;
 $secondary-dark: #393939;
@@ -29,6 +40,17 @@ $screen-width: 960px;
             @content;
         }
     }  
+}
+
+@mixin header-style() {
+    color: $primary-dark;
+    font-family: $display-font;
+    font-size: $header-font-size;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 4%;
+    height: $header-height;
 }
 
 *::selection {
