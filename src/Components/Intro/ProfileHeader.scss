@@ -1,7 +1,5 @@
 @import '../../Settings/Settings.scss';
 
-
-
 .profile-header {
     @include header-style();
     z-index:500p;
@@ -14,7 +12,7 @@
     width:10px;
     height:100px;
     background-color: $primary-dark;
-    left: 40%;
+    margin-left: -30px;
 }
 
 .profile-header::after {
@@ -24,6 +22,7 @@
     width:10px;
     height:100px;
     background-color: $primary-dark;
-    right: 40%;
+    margin-left: 20px;
 }
+
 // !!! TODO: to fix header (which is not responsive right now)

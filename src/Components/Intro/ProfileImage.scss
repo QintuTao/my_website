@@ -1,6 +1,14 @@
 @import '../../Settings/Settings.scss';
 
-.profile-image  {
+@mixin image-filter() {
+    filter: grayscale(100%) contrast(2);
+}
+
+.profile-image {
     object-fit: contain;
     width: 100vw;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    @include image-filter();
 }
+
