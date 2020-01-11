@@ -1,30 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,600,600i|Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Public+Sans:200|Saira+Stencil+One&display=swap');
 
-$primary-font: "Nunito", sans-serif;
-$display-font: "Saira Stencil One", cursive;
+$display-font: 'Saira Stencil One', cursive;
+$primary-font: 'Public Sans', sans-serif;
+
 
 $primary-font-weight: 300;
 $bold-font-weight: 600;
 
-$display-font-size: 90px;
+$display-font-size: 80px;
 $mobile-display-font-size: 8vw;
 
 $slogan-font-size: 24px;
 $mobile-slogan-font-size: 16px;
 
-$header-font-size: 60px;
+$header-font-size: 40px;
 $mobile-header-font-size: 5.67vw;
 
 $header-height: 100px;
 
 $primary-dark: #1f1f1f;
-$primary-white: #f7f7f7;
+$primary-white: #fbfafa;
 $secondary-dark: #393939;
-$secondary-white: #ddd;
+$secondary-white: rgb(231, 230, 230);
 $selection-yellow: #ebb82b;
 
 $phone-width: 480px;
 $screen-width: 960px;
+
 
 @mixin response-to($device) {
     @if $device == phones {
@@ -42,16 +44,7 @@ $screen-width: 960px;
     }  
 }
 
-@mixin header-style() {
-    color: $primary-dark;
-    font-family: $display-font;
-    font-size: $header-font-size;
-    text-align: center;
-    width: 400px;
-    margin: auto;
-    margin-bottom: 4%;
-    height: $header-height;
-}
+
 
 *::selection {
     background-color:$selection-yellow;

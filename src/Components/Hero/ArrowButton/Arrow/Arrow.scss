@@ -1,40 +1,31 @@
-@import "../../Settings/Settings";
+@import "../../../../Settings/Settings";
 
+// Constants
 $arrow-stroke: solid 3px $primary-dark;
 
 $arrow-side-length: 24px;
 $mobile-arrow-side-length: 10px;
 
-$arrow-button-background: transparent;
-$arrow-button-border: none;
-
 $arrow-animation-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.414s;
 $arrow-animation-properties: float-animation 1.45s infinite $arrow-animation-transition;
 
 .arrow {
-    border-top:$arrow-stroke;
-    border-right: $arrow-stroke;
     display: block;
     width: $arrow-side-length;
     height: $arrow-side-length;
     margin: -5px;
     padding: auto;
+    
     transform: rotate(135deg);
     transition: $arrow-animation-transition;
     animation: $arrow-animation-properties;
+
+    border-top:$arrow-stroke;
+    border-right: $arrow-stroke;
 }
 
-.arrow-button {
-    border: $arrow-button-border;
-    background: $arrow-button-background;
-}
-
-.arrow-button:hover .arrow {
-    border-color: $selection-yellow;
-    transition: $arrow-animation-transition;
-    box-shadow: 3px -3px 3px $selection-yellow;
-}
-
+// Animation for color changing
+// Goes black to white to black
 @keyframes float-animation {
     0% {
         border-color: $primary-dark;
@@ -46,4 +37,5 @@ $arrow-animation-properties: float-animation 1.45s infinite $arrow-animation-tra
         border-color: $secondary-dark;
     }
 }
+
 

@@ -1,8 +1,19 @@
 @import '../../Settings/Settings.scss';
 
+@mixin header-style() {
+    color: $primary-dark;
+    font-family: $display-font;
+    font-size: $header-font-size;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 0%;
+    height: $header-height;
+}
+
 .profile-header {
     @include header-style();
-    z-index:500p;
+    z-index:500;
 }
 
 .profile-header::before {
@@ -10,7 +21,7 @@
     display: inline-block;
     position: absolute;
     width:10px;
-    height:100px;
+    height:70px;
     background-color: $primary-dark;
     margin-left: -30px;
 }
@@ -20,7 +31,7 @@
     display: inline-block;
     position: absolute;
     width:10px;
-    height:100px;
+    height:70px;
     background-color: $primary-dark;
     margin-left: 20px;
 }

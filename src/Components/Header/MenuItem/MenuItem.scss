@@ -1,0 +1,89 @@
+@import "../../../Settings/Settings.scss";
+
+//Constants
+$button-nums: 3; // passing varible values from javascript
+$z: 1000; 
+
+$button-width: percentage(1/$button-nums); // equally devide cells 
+$button-width-computer: 300px;
+$button-height: 8%;
+
+$button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
+
+@mixin button-line{
+    content:" ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 0;
+    height: $button-height;
+    margin-left: $button-width-computer / 2;
+
+    background-color: $selection-yellow;
+    transition: $button-tapped-transition;
+}
+
+@mixin button-line-hover {
+    content:" ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: $button-width/2;
+    height: $button-height;
+
+    background-color: $selection-yellow;
+    transition: $button-tapped-transition;
+}
+
+.menu-buttons {
+    width: $button-width;
+    height: 100%;
+    padding: 0;
+    z-index: $z;
+
+    font-family: $primary-font;
+    border:none;
+    background-color: $primary-white;
+
+    transition: $button-tapped-transition;
+
+    @include response-to(wide) {
+        width: $button-width-computer;
+    }
+}
+
+.menu-buttons::after {
+    @include button-line;
+    @include response-to(wide) {
+        margin-left: $button-width-computer / 2;
+    }
+} 
+
+.menu-buttons:hover::after {
+
+    @include button-line-hover;
+    @include response-to(wide) {
+        width: $button-width-computer/2;
+    }
+}
+
+.menu-buttons::before {
+    @include button-line;
+    @include response-to(wide) {
+        margin-left: $button-width-computer/2;
+    }
+} 
+
+.menu-buttons:hover::before {
+    @include button-line-hover;
+    @include response-to(wide) {
+        width: $button-width-computer/2;
+        margin-left:0;
+    }
+}
+
+.menu-buttons:hover {
+    background: $secondary-white;
+}
+
+// TODO: - fix the issue where animation does not work on small width screen

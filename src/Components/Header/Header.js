@@ -1,21 +1,15 @@
 import React from 'react';
 import "./Header.scss";
-import MenuItem from "./MenuItem";
+import MenuItem from "./MenuItem/MenuItem";
 
-class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className="header">
-                <MenuItem />
-                <MenuItem />
-                <MenuItem />
-            </div>
-        )
-    }
+const Header = (props) => {
+    return (
+        <div className="header">
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+        </div>
+    )
 }
 
 export default Header;

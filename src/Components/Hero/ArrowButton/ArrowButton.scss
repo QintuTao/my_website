@@ -1,0 +1,18 @@
+@import "../../../Settings/Settings";
+
+$arrow-button-background: transparent;
+$arrow-button-border: none;
+
+$arrow-animation-transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.414s;
+
+.arrow-button {
+    border: $arrow-button-border;
+    background: $arrow-button-background;
+}
+
+// Hover animation on arrows
+.arrow-button:hover .arrow {
+    border-color: $selection-yellow;
+    transition: $arrow-animation-transition;
+    box-shadow: 3px -3px 3px $selection-yellow;
+}
