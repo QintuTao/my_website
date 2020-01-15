@@ -16,17 +16,17 @@ $mobile-slogan-font-size: 16px;
 $header-font-size: 40px;
 $mobile-header-font-size: 5.67vw;
 
-$header-height: 100px;
+$header-height: 120px;
 
 $primary-dark: #1f1f1f;
 $primary-white: #fbfafa;
-$secondary-dark: #393939;
-$secondary-white: rgb(231, 230, 230);
+$secondary-dark: #d1cdcd;
+$secondary-white: rgb(246, 246, 246);
 $selection-yellow: #ebb82b;
+$every-box-shadow: 4px 2px 10px rgba(0,0,0,0.2);
 
 $phone-width: 480px;
 $screen-width: 960px;
-
 
 @mixin response-to($device) {
     @if $device == phones {
@@ -44,8 +44,10 @@ $screen-width: 960px;
     }  
 }
 
-
-
 *::selection {
     background-color:$selection-yellow;
+}
+
+ul, #myUL {
+    list-style-type: none;
 }

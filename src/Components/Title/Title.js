@@ -5,13 +5,13 @@ class Title extends React.Component {
     render() {
         if (this.props.field == "about") {
             return (
-                <div className="profile-header">
+                <div className="title-text">
                     ABOUT ME
                 </div>
             )
         } else if (this.props.field == "portfolio") {
             return (
-                <div className="profile-header">
+                <div className="title-text">
                     Portfolio
                 </div>
             )

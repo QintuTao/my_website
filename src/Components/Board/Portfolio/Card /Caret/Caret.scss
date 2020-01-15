@@ -1,0 +1,77 @@
+@import "../../../../../Settings/Settings.scss";
+
+.caret-title {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+
+    display: block;
+    width: 100%;
+    line-height: 60px;
+
+    color: $selection-yellow;
+    font-size: 1.2em;
+    font-family: $primary-font;
+    transition: 0.8s;
+}
+
+.caret-down {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+
+    display: block;
+    width: 100%;
+    line-height: 30px;
+
+    color: $primary-dark;
+    font-family: $primary-font;
+    transition: 0.8s;
+}
+  
+.caret-title::before {
+    content: "\25B6";
+    display: inline-block;
+    padding-right: 5px;
+
+    color: $primary-dark;
+
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition: 0.8s;
+}
+
+.caret-down::before {
+    content: "\25B6";
+    display: inline-block;
+    padding-right: 5px;
+
+    transition: 0.8s;
+}
+
+.nested {
+    display: none;
+}
+
+.expended {
+    cursor: pointer;
+    display: inline-block;
+    font-family: $primary-font;
+    width: 100%;
+    line-height: 50px;
+
+    transition: 0.3s;
+    border-top: 1px solid $secondary-dark;
+}
+
+.expended:hover {
+    transition: 0.3s;
+    color: $selection-yellow;
+}
+

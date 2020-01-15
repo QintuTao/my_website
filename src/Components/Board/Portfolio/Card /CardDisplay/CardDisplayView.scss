@@ -1,0 +1,20 @@
+@import "../../../../../Settings/Settings.scss";
+
+.caret-display-container {
+    padding: 32px;
+
+    > h3 {
+        font-size: 24px;
+        font-family: $display-font;
+    }
+
+    > p {
+        font-family: $primary-font;
+    }
+
+    > a {
+        text-decoration: underline;
+        color: $selection-yellow;
+        font-family: $primary-font;
+    }
+}

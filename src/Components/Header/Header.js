@@ -5,9 +5,9 @@ import MenuItem from "./MenuItem/MenuItem";
 const Header = (props) => {
     return (
         <div className="header">
-            <MenuItem />
-            <MenuItem />
-            <MenuItem />
+            <MenuItem itemContent="ABOUT ME" />
+            <MenuItem itemContent="PORTOLIO" />
+            <MenuItem itemContent="CONTACT" />
         </div>
     )
 }

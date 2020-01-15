@@ -1,0 +1,22 @@
+@import "../../../../Settings/Settings.scss";
+
+.card  {
+    display: inline-grid;
+    grid-template-columns: 220px auto;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 3%;
+}
+.caret-container {
+    display: block;
+    width: 220px;
+
+    > div {
+        transition: 0.8s;
+    }
+}
+
+.card-display-container {
+    display: block;
+    width:100%;
+}

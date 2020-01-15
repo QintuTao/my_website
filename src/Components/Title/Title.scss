@@ -5,18 +5,22 @@
     font-family: $display-font;
     font-size: $header-font-size;
     text-align: center;
-    width: 400px;
+    width: 100%;
     margin: auto;
     margin-bottom: 0%;
     height: $header-height;
+    background-color: $secondary-white;
 }
 
-.profile-header {
-    @include header-style();
+.title-text {
+    padding-top: 2%;
     z-index:500;
+
+    @include header-style();
+    box-shadow: 5px 2px 5px #ccc;
 }
 
-.profile-header::before {
+.title-text::before {
     content: " ";
     display: inline-block;
     position: absolute;
@@ -26,7 +30,7 @@
     margin-left: -30px;
 }
 
-.profile-header::after {
+.title-text::after {
     content: " ";
     display: inline-block;
     position: absolute;
