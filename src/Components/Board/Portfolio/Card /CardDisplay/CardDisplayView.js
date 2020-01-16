@@ -13,10 +13,11 @@ const CardDisplayView = (props) => {
     return (
         <div className="caret-display-container">
             <h3 >{titleComponent}</h3>
+
+            <h4> Description</h4>
             <p  >{descriptionComponent}</p>
-            <a >{sourceComponent}</a>
-            <br />
-            <a >{demoComponent}</a>
+            <p ><b>Source Link:</b> <a href={sourceComponent}>{sourceComponent}</a></p>
+            <p><b>Demo Link:</b> <a href={sourceComponent}>{demoComponent}</a></p>
         </div>
     )
 }

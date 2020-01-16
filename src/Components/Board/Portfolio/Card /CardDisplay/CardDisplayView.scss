@@ -1,20 +1,34 @@
 @import "../../../../../Settings/Settings.scss";
 
 .caret-display-container {
-    padding: 32px;
+    padding: 10px 130px 60px 120px;
 
     > h3 {
-        font-size: 24px;
+        font-size: $slogan-font-size;
         font-family: $display-font;
+    }
+
+    > h4 {
+        font-size: 20px;
+        font-family: $primary-font;
     }
 
     > p {
         font-family: $primary-font;
+        text-align: justify;
+        line-height: 32px;
+
+        > a {
+            cursor: pointer;
+            text-decoration: underline;
+            color: $selection-yellow;
+            font-family: $primary-font;
+
+            &:hover {
+                color: $hover-yellow;
+            }
+        }
     }
 
-    > a {
-        text-decoration: underline;
-        color: $selection-yellow;
-        font-family: $primary-font;
-    }
+    
 }
