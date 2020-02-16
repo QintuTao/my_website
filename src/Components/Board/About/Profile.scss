@@ -1,6 +1,36 @@
 @import '../../../Settings/Settings.scss';
 
-.profile {
-    width: 100%;
-    height: 100vh;
+$image-dimension : 300px;
+$padding-gap: 10%;
+
+.about-container {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    padding: 0px 50px 50px 50px;
 }
+
+.photo {
+    width: $image-dimension;
+    padding: 30px;
+
+    filter: saturate(0.1) contrast(2);
+}
+
+.myself {
+    display: inline-block;
+    text-align: justify;
+    vertical-align: top;
+    width: 60%;
+    height:100%;
+    padding: 20px 50px 0px 80px;
+
+
+    font-family: $primary-font;
+    line-height: 32px;
+}
+
+// .progress-bar-container {
+//     @include grid-put-side(right);
+//     @include grid-put-row(2, 6);
+// }

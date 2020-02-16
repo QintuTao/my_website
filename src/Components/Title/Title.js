@@ -12,7 +12,7 @@ class Title extends React.Component {
         } else if (this.props.field == "portfolio") {
             return (
                 <div className="title-text">
-                    Portfolio
+                    PORTFOLIO
                 </div>
             )
         }

@@ -3,7 +3,7 @@ import "./MenuItem.scss";
 
 const MenuItem = (props) => {
     return (
-        <button className="menu-buttons"> {props.itemContent} </button>
+        <button className="menu-buttons" href={"." + props.itemContent}> {props.itemContent} </button>
     )
 }
 

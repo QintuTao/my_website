@@ -9,7 +9,6 @@
     margin: auto;
     margin-bottom: 0%;
     height: $header-height;
-    background-color: $secondary-white;
 }
 
 .title-text {
@@ -17,27 +16,8 @@
     z-index:500;
 
     @include header-style();
-    box-shadow: 5px 2px 5px #ccc;
 }
 
-.title-text::before {
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    width:10px;
-    height:70px;
-    background-color: $primary-dark;
-    margin-left: -30px;
-}
 
-.title-text::after {
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    width:10px;
-    height:70px;
-    background-color: $primary-dark;
-    margin-left: 20px;
-}
 
 // !!! TODO: to fix header (which is not responsive right now)

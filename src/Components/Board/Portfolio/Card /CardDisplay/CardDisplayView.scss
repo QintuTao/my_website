@@ -16,7 +16,7 @@
     > p {
         font-family: $primary-font;
         text-align: justify;
-        line-height: 32px;
+        line-height: $primary-line-height;
 
         > a {
             cursor: pointer;
