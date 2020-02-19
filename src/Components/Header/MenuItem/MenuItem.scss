@@ -2,7 +2,7 @@
 
 //Constants
 $button-nums: 3; // passing varible values from javascript
-$z: 1000; 
+$z-index: 1000; 
 
 $button-width: percentage(1/$button-nums); // equally devide cells 
 $button-width-computer: 300px;
@@ -39,7 +39,7 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
     width: $button-width;
     height: 100%;
     padding: 0;
-    z-index: $z;
+    z-index: $z-index;
 
     font-family: $primary-font;
     border:none;
@@ -60,7 +60,6 @@ $button-tapped-transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.629s;
 } 
 
 .menu-buttons:hover::after {
-
     @include button-line-hover;
     @include response-to(wide) {
         width: $button-width-computer/2;
