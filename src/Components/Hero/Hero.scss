@@ -1,15 +1,14 @@
 @import "../../Settings/Settings.scss";
 
+// Constant for logo
 $img-dimension: 32vw;
 $img-dimensionm-max: 300px;
 
 $img-distance-to-top: 24vh;
 $mobile-img-distance-to-top: 25vh;
 
-
-
-$slogan-y-offset: -20px;
-$mobile-slogan-y-offset: 0;
+$slogan-y-offset: -20px; // drag down the secondary line of text 
+$mobile-slogan-y-offset: 0; // but not on mobile 
 
 .hero {
     margin: auto;

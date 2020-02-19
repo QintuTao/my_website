@@ -1,7 +1,7 @@
 import React from 'react';
-import "./Hero.scss";
 import Logo from "../../Settings/logo.svg";
 import ArrowButton from "./ArrowButton/ArrowButton";
+import "./Hero.scss";
 
 const Hero = (props) => {
     return (
