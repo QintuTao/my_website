@@ -10,5 +10,10 @@
     margin: auto;
     text-align: center;
     z-index: 1000;
+
+    // hide header menu for phones 
+    @include response-to(phones) {
+        display:none;
+    }
 }
 
