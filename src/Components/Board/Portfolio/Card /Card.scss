@@ -6,11 +6,20 @@
     width: 100%;
     height: calc(100% - 120px);
     padding: 3%;
+
+    @include response-to(phones) {
+        display: block;
+        padding: 0px;
+    }
 }
 .caret-container {
     display: block;
     width: 220px;
 
+    @include response-to(phones) {
+        width:100%;
+    }
+ 
     > div {
         transition: 0.8s;
     }

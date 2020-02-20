@@ -3,6 +3,10 @@
 .caret-display-container {
     padding: 10px 130px 60px 120px;
 
+    @include response-to(phones) {
+        padding: 15px;
+    }
+
     > h3 {
         font-size: $slogan-font-size;
         font-family: $display-font;

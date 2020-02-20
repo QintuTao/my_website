@@ -13,7 +13,6 @@ const Profile = (props) => {
                 <img src={photo} className="photo" alt="my_photo"></img>
                 <p className="myself">Hello. Nice to meet you! My name is Quinn. I'm currently studying first year Science at Univeristy of British Columbia! Being enthusiastic about programming, i'm planning to study Computer Science from second year. I am also a photography lover. Here on this website, you can find more about me, the things I love and my projects! </p>
 
-
                 {/* Not implemented for now */}
                 {/* <div className="progress-bar-container">
                     <ProgressBar title="Programming" description="hello world" progress={50} />
