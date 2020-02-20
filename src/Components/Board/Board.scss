@@ -5,4 +5,11 @@
     border-radius: 20px;
     background-color: $primary-white;
     box-shadow: 10px 10px 10px $secondary-dark;
+
+    // disable all the margins on phones
+    @include response-to(phones) {
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 0px;
+    }
 }

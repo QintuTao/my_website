@@ -8,6 +8,11 @@ $padding-gap: 10%;
     text-align: center;
     vertical-align: top;
     padding: 0px 50px 50px 50px;
+
+    @include response-to(phones) {
+        padding: none;
+        text-align: justify;
+    };
 }
 
 .photo {
@@ -25,12 +30,14 @@ $padding-gap: 10%;
     height:100%;
     padding: 20px 50px 0px 80px;
 
-
     font-family: $primary-font;
     line-height: 32px;
+
+    @include response-to(phones) {
+        line-height: 24px;
+        padding: 0px;
+        width: 100%;
+    }
 }
 
-// .progress-bar-container {
-//     @include grid-put-side(right);
-//     @include grid-put-row(2, 6);
-// }
+// TODO: design a progress bar
